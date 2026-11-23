@@ -1,3 +1,7 @@
+// slowhand patch: SwiftPM compiles these kernels without MLX's -Wno-c++17-extensions
+// (ml-explore/mlx-swift#342), so silence the extension notes here.
+#pragma clang diagnostic ignored "-Wc++17-extensions"
+
 // Copyright © 2023 Apple Inc.
 
 #include <metal_integer>
